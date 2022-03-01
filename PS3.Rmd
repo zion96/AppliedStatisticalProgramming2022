@@ -43,29 +43,57 @@ For this problem set, you will not solve the Monty Hall Problem, but you will ha
   \end{itemize}
 \end{enumerate}
 
-```{r tidy=TRUE}
+```{r constructor, tidy=TRUE}
 
 door_fun<-function(x){
-  door_number<-as.integer(x)
-  if (door_number<=1 | door_number>=3){
-    print("Pick an integer between 1 and 3.")
+  allowable_input<-x %in% c(1,2,3)
+#Assigning a vector to allowable input numbers
+  if (! allowable_input){
+    stop("You didn't enter a door number that exists!")
   }
-  class(x)<-"door"
-  return(x)
+#This tells user that input isn't a valid door number. Alma helped me out with this one because the original function would get messy very fast. 
+  
+  door_number<-as.integer(x)
+  #Stores input as integer
+  class(door_number)<-"door"
+  return(door_number)
 }
 #Creating door selection function. 
 ```
 
-```{r}
-door_fun(4)
-#Testing door function. 
+```{r constructor failure test, tidy=TRUE}
+test_fail<-4
+door_fun(test_fail)
+#Testing for error. 
+```
+```{r constructor sucess test, tidy=TRUE}
+test_success<-2
+door_fun(test_success)
+#Testing for success. 
 ```
 
 
+```{r create validator, tidy=TRUE}
+door_validator<-function(x){
+  door_errors<-  is.integer(x) & any(x %in% as.list(c(1,2,3)))
+  if(door_errors){
+    return(x)
+  } else {
+    stop("You didn't pick a door that was either between 1 and 3 or you didn't select an integer....It's not that hard.")
+  }
+}
+#Notice that if we store the result from the construction function, it will be turned into an integer. So, if we were to, say, run 2.5 in the constructor, saved the output into an object, and passed that object through the validator function, we would not get an error since the object is now an integer. If we wanted to test the validator, then we would just input 2.5. 
+```
 
+```{r validator failure test, tidy=TRUE}
+door_validator(test_fail)
+#Testing for failure. 
+```
 
-
-
+```{r validator sucess test, tidy=TRUE}
+door_fun(test_success)
+#Testing for success. 
+```
 
 
 
