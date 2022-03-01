@@ -44,5 +44,39 @@ For this problem set, you will not solve the Monty Hall Problem, but you will ha
 \end{enumerate}
 
 ```{r tidy=TRUE}
-# Code
+
+door_fun<-function(x){
+  door_number<-as.integer(x)
+  if (door_number<=1 | door_number>=3){
+    print("Pick an integer between 1 and 3.")
+  }
+  
+}
+#Creating door selection function. 
 ```
+
+```{r}
+door_fun(4)
+#Testing door function. 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
