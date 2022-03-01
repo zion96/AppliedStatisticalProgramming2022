@@ -50,7 +50,8 @@ door_fun<-function(x){
   if (door_number<=1 | door_number>=3){
     print("Pick an integer between 1 and 3.")
   }
-  
+  class(x)<-"door"
+  return(x)
 }
 #Creating door selection function. 
 ```
