@@ -1,6 +1,6 @@
 #' Trapezoid rule output
 #'
-#'\code{integrateIt} function creates objects of class \code{"trapezoid}
+#'\code{integrateIt} function creates objects of class \code{"trapezoid"}
 #'
 #'
 #'Objects of this class have the slots
@@ -11,7 +11,7 @@
 #'}
 #'
 #'@author Zion Little: \email{l.zion@@wustl.edu}
-#'aliases trapezoid-class initialize, integrateIt-method
+#'@aliases trapezoid-class initialize, integrateIt-method
 #'@rdname trapezoid
 #'@export
 
@@ -90,4 +90,3 @@ setMethod(f="print",
             print(x@result)
           })
 
-```

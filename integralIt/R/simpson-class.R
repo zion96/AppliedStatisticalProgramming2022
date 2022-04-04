@@ -1,6 +1,6 @@
 #' Simpsons rule output
 #'
-#'\code{integrateIt} function creates objects of class \code{"simpson}
+#'\code{integrateIt} function creates objects of class \code{"simpson"}
 #'
 #'
 #'Objects of this class have the slots
@@ -11,7 +11,7 @@
 #'}
 #'
 #'@author Zion Little: \email{l.zion@@wustl.edu}
-#'aliases simpson-class initialize, integrateIt-method
+#'@aliases simpson-class initialize, integrateIt-method
 #'@rdname simpson
 #'@export
 
