@@ -7,9 +7,10 @@ standardError<-function(y, SEtype, B=20){
     #this is just the se assuming that I'm setting the method to pass the mle through here.
     #I'm not too sure about this yet.
 
-    the_samples<-matrix(unlist(lapply(c(1:B))))
+    the_samples<-matrix(unlist(lapply(c(1:B), FUN=sample(y, n , replace=TRUE))), nrow=n, ncol = B)
 
-    #Okay now I need to think about whether I want another function in here.
+    #Just using lappy to to get the samples as defined in the exam
+
 
 
 }
