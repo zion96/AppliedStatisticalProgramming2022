@@ -2,11 +2,11 @@
 standardError<-function(y, SEtype, B=20){
   #Run the if statement when SEtype is basic
 
+
+  n<-length(y)
+  #Getting n again
+
   if(SEtype=="basic"){
-
-
-    n<-length(y)
-    #Getting n again
 
     the_se<-sqrt(mle(y)/n)
   }
