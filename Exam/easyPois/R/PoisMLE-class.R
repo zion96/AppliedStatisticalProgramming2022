@@ -16,4 +16,11 @@ setClass(Class = "PoisMLE",
          )
   )
 
-setValidity()
+setValidity("PoisMLE", function(object){
+
+  if(any(y<0)){
+    stop("Your vector of y contains negative numbers...TRY AGAIN")
+    #Telling to stop if you feed in negatives. I want the message to be unnecessarily aggressive for this.
+  }
+
+})
