@@ -11,6 +11,11 @@ standardError<-function(y, SEtype, B=20){
 
     #Just using lappy to to get the samples as defined in the exam
 
+    the_mle_samples<-apply(the_samples, MARGIN = 2, FUN = mle)
+    #Create MLE samples as defined in the exam. This passes through the the_samples object
+
+
+
 
 
 }
