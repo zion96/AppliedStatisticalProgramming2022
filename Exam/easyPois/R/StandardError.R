@@ -49,7 +49,7 @@ standardError<-function(y, SEtype, B=20){
     the_mle_samples<-apply(the_samples, MARGIN = 2, FUN = mle)
     #Create MLE samples as defined in the exam. This passes through the the_samples object
 
-    mle_SD<-sd(the_mle_samples)
+    mle_SD<-std(the_mle_samples)
     #Get mle std
 
     the_se<-mle_SD
