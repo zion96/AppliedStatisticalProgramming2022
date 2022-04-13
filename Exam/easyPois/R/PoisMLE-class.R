@@ -23,7 +23,7 @@ setClass(Class = "PoisMLE",
            MLE="numeric",
            LL="numeric",
            SE="numeric",
-           SEType="character",
+           SEType="character"
            #So far, I think this will be a character?
          ),
          prototype=prototype(

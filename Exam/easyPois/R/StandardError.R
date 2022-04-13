@@ -42,7 +42,7 @@ standardError<-function(y, SEtype, B=20){
   #Run the else if statement when SEtype is bootstrap
 
     else if (SEtype=="bootstrap"){
-      the_samples<-matrix(unlist(lapply(c(1:B), FUN=sample(y, n , replace=TRUE))), nrow=n, ncol = B)
+      the_samples<-matrix(unlist(lapply(c(1:B), FUN=sample(y, n , replace=TRUE))), nrow=n, ncol = B, byrow=FALSE)
 
     #Just using lappy to to get the samples as defined in the exam
 

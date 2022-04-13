@@ -27,7 +27,7 @@
 #'@export
 setGeneric(
   name = "estimatePois",
-  definition = function(y, SEtype, B=20){
+  def = function(y, SEtype, B=20){
     standardGeneric("estimatePois")
   }
 )
