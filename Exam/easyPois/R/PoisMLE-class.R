@@ -40,3 +40,5 @@ setValidity("PoisMLE", function(object){
 
 }
 )
+
+setMethod()
