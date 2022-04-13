@@ -1,3 +1,21 @@
+#'MLE for Poisson
+#'
+#'Objects in class \code{PoisMLE} are created by the function \code{estimatePois}
+#'
+#'Objects of class \code{PoisMLE} have the slots"
+#'\itemize{
+#'\item \code{y} is a vector for which all entries are strictly non-negative reals
+#'\item \code{MLE} Poisson MLE for an entry of y
+#'\item \code{LL} Log likelihood from data in y using Poisson MLE estimator
+#'\item \code{SE} Standard error of Poisson MLE
+#'\item \code{SEtype} Standard error calculation method
+#'}
+#'
+#'@author Zion Little: \email{l.zion@@wustl.edu}
+#'@aliases estimatePois-class
+#'@rdname PoisMLE
+#'@export
+
 setClass(Class = "PoisMLE",
          representation=representation(
            y="numeric",
@@ -40,6 +58,9 @@ setValidity("PoisMLE", function(object){
 
 }
 )
+
+#'@rdname PoisMLE
+#'@export
 
 setMethod("initialize", "PoisMLE",
           function(.Object, ...){
