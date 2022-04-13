@@ -11,6 +11,11 @@
 #'
 #'@return The log likelihood value for objects in the class \code{PoisMLE}
 #'
+#'@example
+#'y<-c(1:20)
+#'lambda<-mle(y)
+#'logLik(y=y, lambda=lambda)
+#'
 #'@author Zion Little
 #'@seealso PoisMLE-class, MLE,StandardError
 #'@rdname logLik
