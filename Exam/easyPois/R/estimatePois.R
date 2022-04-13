@@ -39,6 +39,7 @@ setMethod(
   "estimatePois",
   definition = function(y, SEtype, B=20){
     return(methods::new("PoisMLE",
+                        #Initialize object in class "PoisMLE"
                         y = y,
                         MLE = mle(y),
                         LL = logLik(y, mle(y)),
@@ -48,3 +49,4 @@ setMethod(
   }
 )
 
+#Above slots are filled with the outputs of the other functions that are internal--see documentation for those.
