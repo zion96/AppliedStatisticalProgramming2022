@@ -41,4 +41,11 @@ setValidity("PoisMLE", function(object){
 }
 )
 
-setMethod()
+setMethod("initialize", "PoisMLE",
+          function(.Object, ...){
+            value= methods::callNextMethod()
+            #Hellllooooo validator!! (Call validator)
+            methods::validObject(value)
+            return(value)
+          }
+  )
