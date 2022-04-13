@@ -27,9 +27,16 @@ setValidity("PoisMLE", function(object){
     stop("INVALID MLE!!!!!!!!!!!")
     #Test whether MLE is invalid
   }
+
   if(object@LL != logLik(object@y, object@MLE)){
     stop("INVALID LL")
     #Test for valid LL
   }
 
-})
+  if(!(object@SEtype=="basic" | object@MLE=="bootstrap")){
+    stop("Okay...it lists the options for the bootstrap type. USE THE RIGHT ONE. EITHER bootstrap OR basic")
+    #Report the above VERY MEAN error message when the wrong SE type is used somehow
+    }
+
+}
+)
