@@ -26,6 +26,10 @@ setValidity("PoisMLE", function(object){
   if(object@MLE != mle(object@y)){
     stop("INVALID MLE!!!!!!!!!!!")
     #Test whether MLE is invalid
-
   }
+  if(object@LL != logLik(object@y, object@MLE)){
+    stop("INVALID LL")
+    #Test for valid LL
+  }
+
 })
