@@ -52,7 +52,7 @@ setValidity("PoisMLE", function(object){
     #Test for valid LL
   }
 
-  if(!(object@SEtype=="basic" | object@MLE=="bootstrap")){
+  if(!(object@SEtype=="basic" | object@SLEtype=="bootstrap")){
     stop("Okay...it lists the options for the bootstrap type. USE THE RIGHT ONE. EITHER bootstrap OR basic")
     #Report the above VERY MEAN error message when the wrong SE type is used somehow
     }

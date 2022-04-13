@@ -19,7 +19,7 @@
 #'
 #'@examples
 #'\donttest{the_y<-c(1:20)
-#'estimatePois(the_y, SEtype="basic", B=20)}
+#'estimatePois(the_y, SEtype="bootstrap", B=20)}
 #'
 #'@rdname estimatePois
 #'@aliases estimatePois

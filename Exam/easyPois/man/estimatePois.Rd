@@ -32,7 +32,7 @@ For a vector of strictly non-negative entries, this returns an object in the cla
 }
 \examples{
 \donttest{the_y<-c(1:20)
-estimatePois(the_y, SEtype="basic", B=20)}
+estimatePois(the_y, SEtype="bootstrap", B=20)}
 
 }
 \author{
