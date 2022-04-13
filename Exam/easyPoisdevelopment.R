@@ -7,3 +7,5 @@ current.code <- as.package("easyPois")
 load_all(current.code)
 document(current.code)
 install(current.code)
+
+check(current.code)
