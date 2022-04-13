@@ -9,3 +9,7 @@ document(current.code)
 install(current.code)
 
 check(current.code)
+
+y<-c(1:20)
+
+estimatePois(y, SEtype="basic", B=20)
