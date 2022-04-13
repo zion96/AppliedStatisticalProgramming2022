@@ -31,7 +31,7 @@ setClass(Class = "PoisMLE",
            MLE=0,
            LL=0,
            SE=0,
-           SEType="basic"
+           SEtype="basic"
          )
   )
 
