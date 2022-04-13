@@ -23,4 +23,9 @@ setValidity("PoisMLE", function(object){
     #Telling to stop if you feed in negatives. I want the message to be unnecessarily aggressive for this.
   }
 
+  if(object@MLE != mle(object@y)){
+    stop("INVALID MLE!!!!!!!!!!!")
+    #Test whether MLE is invalid
+
+  }
 })
