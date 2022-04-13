@@ -13,4 +13,7 @@ setClass(Class = "PoisMLE",
            LL=0,
            SE=0,
            SEType="basic"
-         ))
+         )
+  )
+
+setValidity()
