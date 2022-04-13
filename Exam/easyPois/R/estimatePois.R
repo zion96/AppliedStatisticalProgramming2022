@@ -1,10 +1,13 @@
 setGeneric(
   name = "estimatePois",
-  def = function(y, SEtype, B=20){
+  definition = function(y, SEtype, B=20){
     standardGeneric("estimatePois")
   }
 )
 
 
-setMethod()
+setMethod(
+  "estimatePois",
+  definition
+)
 
