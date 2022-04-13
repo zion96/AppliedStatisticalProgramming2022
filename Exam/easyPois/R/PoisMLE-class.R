@@ -14,6 +14,7 @@
 #'@author Zion Little: \email{l.zion@@wustl.edu}
 #'@aliases estimatePois-class
 #'@rdname PoisMLE
+#'
 #'@export
 
 setClass(Class = "PoisMLE",
@@ -60,6 +61,7 @@ setValidity("PoisMLE", function(object){
 )
 
 #'@rdname PoisMLE
+#'
 #'@export
 
 setMethod("initialize", "PoisMLE",
